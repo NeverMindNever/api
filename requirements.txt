@@ -1,0 +1,2 @@
+waitress==1.4.4
+easyEstimate==0.4.4
