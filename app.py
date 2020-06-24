@@ -2,7 +2,7 @@ import easyEstimate
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
-version = "0.1.2"
+version = "0.1.3"
 base = ""
 
 
