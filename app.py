@@ -2,8 +2,9 @@ import easyEstimate
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
-version= "0.1.1"
+version = "0.1.2"
 base = ""
+
 
 @app.route('/v0/estimate', methods=['GET', 'POST'])
 def estimate():
@@ -17,7 +18,7 @@ def estimate():
             "App Name": "The API",
             "Version": version,
             "Description": "Get easily an estimation for any property in France",
-            easyEstimate.__name__ : easyEstimate.__name__
+            easyEstimate.__name__: easyEstimate.version
 
         })
 
