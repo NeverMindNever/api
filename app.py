@@ -18,7 +18,7 @@ def estimate():
             "App Name": "The API",
             "Version": version,
             "Description": "Get easily an estimation for any property in France",
-            easyEstimate.__name__: easyEstimate.version
+            easyEstimate.__name__: "easyEstimate.version"
 
         })
 
