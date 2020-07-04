@@ -1,8 +1,8 @@
-import easyEstimate
+import easyEstimate2
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
-version = "0.1.3"
+version = "0.2.0"
 base = ""
 
 
@@ -10,15 +10,16 @@ base = ""
 def estimate():
     if request.method == 'POST':
         hab = request.get_json()
-        return jsonify({"Estimation": easyEstimate.estimer(hab["numero"], hab["type_voie"], hab["voie"],
-                                                           hab["code_postal"], hab["surface"], hab["nbr_piece"],
-                                                           hab["nature"], hab["surface_terrain"])})
+        return jsonify({"Estimation": easyEstimate2.estimer(hab["numero"], hab["type_voie"], hab["voie"],
+                                                            hab["code_postal"], hab["surface"], hab["nbr_piece"],
+                                                            hab["nature"], hab["surface_terrain"])})
     else:
         return jsonify({
             "App Name": "The API",
             "Version": version,
-            "Description": "Get easily an estimation for any property in France",
-            easyEstimate.__name__: "0.4.6"
+            "Description": "Get easily an estimation for any property in France, The estimation is calculated based",
+            "Model": "Random forest Regressor",
+            easyEstimate2.__name__: "0.5.0"
 
         })
 
